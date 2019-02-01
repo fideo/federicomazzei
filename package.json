@@ -15,9 +15,16 @@
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
   },
   "dependencies": {
-    "nuxt": "^2.0.0"
+    "emailjs-com": "^2.3.2",
+    "material-design-icons-iconfont": "^4.0.4",
+    "nuxt": "^2.0.0",
+    "nuxt-fontawesome": "^0.4.0",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "vuetify": "^1.4.3"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.7.0",
     "babel-eslint": "^10.0.1",
     "eslint": "^4.19.1",
     "eslint-friendly-formatter": "^4.0.1",
