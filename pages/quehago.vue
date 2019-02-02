@@ -28,7 +28,7 @@
             <v-img
               class="white--text"
               height="200px"
-              src="/ecommerce.jpg"
+              src="/images/ecommerce.jpg"
             >
               <v-container
                 fill-height
@@ -63,7 +63,7 @@
             <v-img
               class="black--text"
               height="200px"
-              src="/responsive.jpg"
+              src="/images/responsive.jpg"
             >
               <v-container
                 fill-height
@@ -98,7 +98,7 @@
             <v-img
               class="white--text"
               height="200px"
-              src="/hosting.jpg"
+              src="/images/hosting.jpg"
             >
               <v-container
                 fill-height
