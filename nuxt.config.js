@@ -16,7 +16,8 @@ module.exports = {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
   env: {
-    baseUrl: process.env.BASE_URL || 'https://fideo.github.io/federicomazzei/'
+    // routerMode: '',
+    baseUrl: 'https://fideo.github.io/federicomazzei/', 
   },
 
   /*
