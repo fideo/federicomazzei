@@ -15,8 +15,8 @@
           <p class="subheading">Te cuento un poco acerca de mi vida laboral. Ya que para mi vida personal existe Instagram, Twitter y Facebook (ordenadas en forma descendentes en uso)</p>
           <v-timeline>
             <v-timeline-item
-              v-for="historia in historias"
-              :key="historia"
+              v-for="(historia, index) in historias"
+              :key="index"
               color="yellow lighten-2"
               large
             >
