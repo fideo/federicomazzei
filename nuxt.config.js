@@ -17,7 +17,7 @@ module.exports = {
   },
   env: {
     // routerMode: '',
-    baseUrl: 'https://fideo.github.io/federicomazzei/', 
+    baseUrl: '/federicomazzei/'
   },
 
   /*
