@@ -27,13 +27,13 @@ module.exports = {
   /*
    ** Agrego Vuetify
    */
-  plugins: ['~plugins/vuetify.js'],
+  plugins: ['~/plugins/vuetify.js'],
   /*
    ** Agrego el CSS para Vuetify
    */
   css: [
     {
-      src: '~assets/css/app.styl',
+      src: '~/assets/css/app.styl',
       lang: 'styl'
     }
   ],
