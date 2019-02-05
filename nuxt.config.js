@@ -15,9 +15,8 @@ module.exports = {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
-  env: {
-    // routerMode: '',
-    baseUrl: '/federicomazzei/'
+  router: {
+    base: '/federicomazzei/'
   },
 
   /*
