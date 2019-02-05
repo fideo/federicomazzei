@@ -15,14 +15,10 @@ module.exports = {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
-  router: {
-    base: '/'
-  },
-
   /*
    ** Customize the progress bar color
    */
-  loading: { color: '#3B8070' },
+  loading: { color: 'yellow' },
   /*
    ** Agrego Vuetify
    */
