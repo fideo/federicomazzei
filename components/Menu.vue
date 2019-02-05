@@ -41,26 +41,26 @@
         >
           <v-list-tile
             key="index"
-            to="./"
+            to="/"
           >Inicio</v-list-tile>
         </v-btn>
         <v-btn
           flat
-          to="./acercademi"
+          to="acercademi"
         >
-          <v-list-tile to="./acercademi">Este soy yo</v-list-tile>
+          <v-list-tile to="acercademi">Este soy yo</v-list-tile>
         </v-btn>
         <v-btn
           flat
-          to="./quehago"
+          to="quehago"
         >
-          <v-list-tile to="./quehago">¿Qué se hacer?</v-list-tile>
+          <v-list-tile to="quehago">¿Qué se hacer?</v-list-tile>
         </v-btn>
         <v-btn
           flat
-          to="./escribime"
+          to="escribime"
         >
-          <v-list-tile to="./escribime">Escribime</v-list-tile>
+          <v-list-tile to="escribime">Escribime</v-list-tile>
         </v-btn>
       </v-toolbar-items>
     </v-toolbar>
@@ -72,26 +72,23 @@ export default {
   data: () => ({
     drawer: null,
     menuizq: [
-      { title: "Inicio", icon: "home", link: "./", grupo: "inicial" },
+      { title: "Inicio", icon: "home", link: "" },
       {
         title: "Este soy yo",
         icon: "account_circle",
-        link: "./acercademi"
+        link: "acercademi"
       },
       {
         title: "¿Qué se hacer?",
         icon: "build",
-        link: "./quehago"
+        link: "quehago"
       },
       {
         title: "Escribime",
         icon: "phone",
-        link: "./escribime"
+        link: "escribime"
       }
     ]
   })
 };
 </script>
-
-<style>
-</style>
