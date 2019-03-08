@@ -19,7 +19,7 @@ module.exports = {
   /*
    ** Customize the progress bar color
    */
-  loading: { color: 'yellow' },
+  loading: { color: '#3CB371' },
   /*
    ** Agrego Vuetify
    */

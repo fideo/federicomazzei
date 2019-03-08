@@ -74,7 +74,7 @@ export default {
   data: () => ({
     drawer: null,
     menuizq: [
-      { title: "Inicio", icon: "home", link: "" },
+      { title: "Inicio", icon: "home", link: "/" },
       {
         title: "Este soy yo",
         icon: "account_circle",

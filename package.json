@@ -5,6 +5,7 @@
   "author": "Federico Mazzei <federicomazzei@gmail.com>",
   "private": true,
   "scripts": {
+    "mode": "spa",
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
