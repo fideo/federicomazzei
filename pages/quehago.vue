@@ -48,7 +48,7 @@
             <v-card-title>
               <div>
                 <span class="grey--text">E-Commerce</span><br>
-                <span>Necesitas vender tus productos por internet, desarrollo tu sitio con Prestashop donde podemos agregarles cientos de prestaciones adicionales.</span>
+                <span>¿Necesitas vender por internet?, desarrollo tu sitio para que puedas exponer tus productos de manera eficiente y clara. Analizamos en conjunto los requerimientos de tu sitio e implemento la mejor opción para tus necesidades.</span>
               </div>
             </v-card-title>
           </v-card>
@@ -83,7 +83,7 @@
             <v-card-title>
               <div>
                 <span class="grey--text">Diseño Responsive</span><br>
-                <span>Utilizamos Bootstrap para realizar nuestros diseños dandolé una mejor optimización al sitio según el dispositivo con el que se esté visualizando el sitio.</span>
+                <span>Los sitios webs hoy deben poder visualizarse correctamente tanto en dispositivos moviles como en pc de esctorios, portátiles o tablets; para esto tu sitio tiene que estar optimizado para que pueda verse correctamente en cualquiera de esos formatos.</span>
               </div>
             </v-card-title>
           </v-card>
@@ -118,7 +118,7 @@
             <v-card-title>
               <div>
                 <span class="grey--text">Hosting - Alojamiento Web</span><br>
-                <span>Realizo el hosting de tu sitio dandoté la mejor atención y servicio. Contando con tecnología de última generación otorgada por dattatec.</span>
+                <span>Realizo el hosting de tu sitio dandoté la mejor atención y servicio. Contando con tecnología de última generación. Podés integra tu correo electrónico con gmail manteniendo el nombre de tu dirección web por ejemplo info@tuempresa.com.ar</span>
               </div>
             </v-card-title>
           </v-card>

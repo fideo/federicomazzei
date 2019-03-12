@@ -12,7 +12,7 @@
         align-center
       >
         <v-flex>
-          <h1 class="titulo">
+          <h1 class="miEmpresa">
             Federico Mazzei
           </h1>
           <!-- <h2 class="subtitle">

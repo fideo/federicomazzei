@@ -12,7 +12,7 @@
       >
         <v-flex class="margenTop">
           <p class="display-1 text-uppercase">Este soy yo</p>
-          <p class="subheading">Te cuento un poco acerca de mi vida laboral. Ya que para mi vida personal existe Instagram, Twitter y Facebook (ordenadas en forma descendentes en uso)</p>
+          <p class="subheading">Te cuento un poco acerca de mi vida laboral. Ya que para mi vida personal existe <a href="https://www.instagram.com/fideox/">Instagram</a>, <a href="https://twitter.com/fideox/">Twitter</a> y <a href="https://www.facebook.com/mazzeifederico">Facebook</a> (ordenadas en forma descendentes en uso)</p>
           <v-timeline>
             <v-timeline-item
               v-for="(historia, index) in historias"
