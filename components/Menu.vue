@@ -27,6 +27,7 @@
         fixed
         dark
       >
+        <v-spacer></v-spacer>
         <v-btn
           color="blue"
           dark
@@ -64,6 +65,7 @@
             <v-list-tile to="escribime">Escribime</v-list-tile>
           </v-btn>
         </v-toolbar-items>
+        <v-spacer></v-spacer>
       </v-toolbar>
     </no-ssr>
   </div>

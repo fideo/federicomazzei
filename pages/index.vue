@@ -12,7 +12,10 @@
         align-center
       >
         <v-flex>
-          <h1 class="miEmpresa">
+          <h1
+            class="miEmpresa"
+            v-bind:style="{fontFamily: typo, color: colorFideo, fontSize: size}"
+          >
             Federico Mazzei
           </h1>
           <!-- <h2 class="subtitle">
@@ -25,7 +28,31 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      colorFideo: "#" + Math.floor(Math.random() * 16777215).toString(16)
+    };
+  },
+  head() {
+    return {
+      colorFideo: this.colorFideo
+    };
+  },
+  asyncData(context) {
+    //Selecciono una tipografía al azar
+    let typografias = ["Aquatico", "Prosto", "Track", "Akid"];
+    const typo = typografias[Math.floor(Math.random() * typografias.length)];
+    //Selecciono un tamaño de tipografía al azar
+    let sizeFont = ["8", "9", "10", "11", "12"];
+    const size = sizeFont[Math.floor(Math.random() * sizeFont.length)] + "vw";
+
+    return {
+      typo: typo,
+      size: size
+    };
+  }
+};
 </script>
 
 <style lang="stylus" scoped>
