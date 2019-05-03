@@ -103,7 +103,15 @@ module.exports = {
       lang: 'styl'
     }
   ],
-  modules: ['nuxt-fontawesome'],
+  modules: ['nuxt-fontawesome','@nuxtjs/markdownit'],
+
+  markdownit: {
+    preset: 'default',
+    linkify: true,
+    breaks: true,
+    injected: true    
+  },
+
   /*
    ** Build configuration
    */
