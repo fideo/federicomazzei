@@ -64,6 +64,12 @@
           >
             <v-list-tile to="escribime">Escribime</v-list-tile>
           </v-btn>
+          <v-btn
+            flat
+            to="/es/blog"
+          >
+            <v-list-tile to="/es/blog">Blog</v-list-tile>
+          </v-btn>
         </v-toolbar-items>
         <v-spacer></v-spacer>
       </v-toolbar>

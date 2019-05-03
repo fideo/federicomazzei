@@ -12,8 +12,8 @@
           xs12
           class="margenTop"
         >
-        <h1>Este es el blog</h1>
-        <div v-html="fm"></div>
+          <h1>Este es el blog</h1>
+          <BlogSection :blogs="blogs" />
         </v-flex>
       </v-layout>
     </v-container>
@@ -21,10 +21,13 @@
 </template>
 
 <script>
-  import fm from "~/content/es/blog/primer-post.md"
- 
-  export default {
-    /*async asyncData ({params, app}) {
+//import fm from "~/contents/es/blogsEs.js";
+import BlogSection from "~/components/Sections/BlogSection.vue";
+import blogsEn from "~/contents/en/blogsEn.js";
+import blogsEs from "~/contents/es/blogsEs.js";
+
+export default {
+  /*async asyncData ({params, app}) {
       const fileContent = await import(fm)
       const attr = fileContent.attributes
       return {
@@ -32,18 +35,65 @@
         description: attr.description,
         title: attr.title,
       }
-    },
-    props: {
-        blogs: {
-          type: Array
-        }
     },*/
-    computed: {
-      fm() {
-        return fm
-      }
+  async asyncData({ store }) {
+    const blogs = store.state.i18n.locale === "en" ? blogsEn : blogsEs;
+
+    async function asyncImport(blogName) {
+      const wholeMD = await import(`~/contents/${
+        store.state.i18n.locale
+      }/blog/${blogName}.md`);
+      return wholeMD.attributes;
+    }
+
+    return Promise.all(blogs.map(blog => asyncImport(blog))).then(res => {
+      return {
+        blogs: res
+      };
+    });
+  },
+
+  components: { BlogSection },
+
+  head() {
+    return {
+      title: this.$t("indexPageHead.title"),
+      htmlAttrs: {
+        lang: this.$i18n.locale
+      },
+      meta: [
+        { name: "author", content: "Marina Aisa" },
+        {
+          name: "description",
+          property: "og:description",
+          content: this.$t("indexPageHead.description"),
+          hid: "description"
+        },
+        { property: "og:title", content: this.$t("indexPageHead.title") },
+        { property: "og:image", content: this.ogImage },
+        {
+          name: "twitter:description",
+          content: this.$t("indexPageHead.description")
+        },
+        { name: "twitter:image", content: this.ogImage }
+      ]
+    };
+  },
+  computed: {
+    ogUrl: function() {
+      return process.env.baseUrl;
+    },
+    ogImage: function() {
+      return `${process.env.baseUrl}/images/fb-banner.jpg`;
+    },
+    pageTitle: function() {
+      return "title";
+    },
+    pageDescription: function() {
+      return "description";
     }
   }
+};
 /*import fm from "~/content/es/blog/primer-post.md";
 
 export default {

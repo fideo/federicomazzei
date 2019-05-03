@@ -1,4 +1,8 @@
 const builtAt = new Date().toISOString()
+const path = require('path')
+const { I18N } = require('./locales/i18n-nuxt-config')
+import blogsEn from './contents/en/blogsEn.js'
+import blogsEs from './contents/es/blogsEs.js'
 
 module.exports = {
   /*
@@ -103,21 +107,27 @@ module.exports = {
       lang: 'styl'
     }
   ],
-  modules: ['nuxt-fontawesome','@nuxtjs/markdownit'],
+  modules: ['nuxt-fontawesome', '@nuxtjs/markdownit', ['nuxt-i18n', I18N]],
+
+  generate: {
+    routes: ['/es', '404']
+      .concat(blogsEn.map(w => `/blog/${w}`))
+      .concat(blogsEs.map(w => `es/blog/${w}`))
+  },
 
   markdownit: {
     preset: 'default',
     linkify: true,
     breaks: true,
-    injected: true    
+    injected: true
   },
 
   /*
    ** Build configuration
    */
   build: {
-    vendor: ['vuetify'],
     /*
+     * vendor: ['vuetify'], // Lo comento porque me tira un Warning quiero ver si se va luego de comentarlo.
      ** Run ESLint on save
      */
     extend(config, { isDev, isClient }) {
