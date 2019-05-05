@@ -51,7 +51,7 @@
       const fileContent = await import(`~/contents/${store.state.i18n.locale}/blog/${params.slug}.md`)
       const attr = fileContent.attributes
       return {
-        name: params.slug,
+        name: "pepe",
         title: attr.title,
         trans: attr.trans,
         year: attr.year,
