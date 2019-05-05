@@ -4,7 +4,22 @@ const { I18N } = require('./locales/i18n-nuxt-config')
 import blogsEn from './contents/en/blogsEn.js'
 import blogsEs from './contents/es/blogsEs.js'
 
+const productionUrl = {
+  en: "/en",
+  es: "/es"
+};
+const baseUrl = 'https://federicomazzei.com.ar';
+
+const works = [
+  "vr-player"
+];
+
 module.exports = {
+  env: {
+    baseUrl,
+    productionUrl,
+    works
+  },
   /*
    ** Headers of the page
    */
@@ -107,20 +122,8 @@ module.exports = {
       lang: 'styl'
     }
   ],
-  modules: ['nuxt-fontawesome', '@nuxtjs/markdownit', ['nuxt-i18n', I18N]],
+  modules: ['nuxt-fontawesome', ['nuxt-i18n', I18N]],
 
-  generate: {
-    routes: ['/es', '404']
-      .concat(blogsEn.map(w => `/blog/${w}`))
-      .concat(blogsEs.map(w => `es/blog/${w}`))
-  },
-
-  markdownit: {
-    preset: 'default',
-    linkify: true,
-    breaks: true,
-    injected: true
-  },
 
   /*
    ** Build configuration
@@ -139,6 +142,40 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
+      const rule = config.module.rules.find(r => r.test.toString() === '/\\.(png|jpe?g|gif|svg|webp)$/');
+      config.module.rules.splice(config.module.rules.indexOf(rule), 1);
+
+      config.module.rules.push({
+        test: /\.md$/,
+        loader: 'frontmatter-markdown-loader',
+        include: path.resolve(__dirname, 'contents'),
+        options: {
+          vue: {
+            root: "dynamicMarkdown"
+          }
+        }
+      }, {
+        test: /\.(jpe?g|png)$/i,
+        loader: 'responsive-loader',
+        options: {
+          placeholder: true,
+          quality: 60,
+          size: 1400,
+          adapter: require('responsive-loader/sharp')
+        }
+      }, {
+        test: /\.(gif|svg)$/,
+        loader: 'url-loader',
+        query: {
+          limit: 1000,
+          name: 'img/[name].[hash:7].[ext]'
+        }
+      });
     }
+  },
+  generate: {
+    routes: ['/es', '404']
+      .concat(blogsEn.map(w => `/blog/${w}`))
+      .concat(blogsEs.map(w => `es/blog/${w}`))
   }
 }
