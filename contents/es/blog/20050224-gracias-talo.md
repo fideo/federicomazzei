@@ -2,12 +2,13 @@
 title: Gracias TALO
 link: http://fideox.federicomazzei.com.ar/gracias-talo/
 author: admin
-description: 
+description: Agreadesco a Talo por presentarme Wordpress
 post_id: 2
 created: 2005/02/24 01:20:32
 created_gmt: 2005/02/24 04:20:32
 comment_status: open
-post_name: gracias-talo
+trans: 20050224-gracias-talo
+name: 20050224-gracias-talo
 status: publish
 post_type: post
 ---
@@ -18,5 +19,4 @@ Parece que me copie, pero en realidad necesitaba ponerle onda a mi site y esta e
 
 ## Comments
 
-**[Talo](#2 "2005-02-24 10:23:59"):** De nada Doctor, aguante el open source! Quedo perfecto ;D
-
+**[Talo](#2 '2005-02-24 10:23:59'):** De nada Doctor, aguante el open source! Quedo perfecto ;D

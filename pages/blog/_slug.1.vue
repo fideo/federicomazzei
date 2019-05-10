@@ -4,12 +4,9 @@
       <div class="elevate-cover">
         <div class="elevate-cover__textOffset">
           <div class="elevate-cover__text">
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
             <span class="blogSelected-year">{{ year }}</span>
             —
-            <!--<nuxt-link
+            <nuxt-link
               v-if="trans"
               v-for="(locale, i) in showLocales"
               :key="i"
@@ -18,7 +15,7 @@
 
               {{ $t('changeLanguagePost') }}
             </nuxt-link>
-            <span v-else>{{ $t('soonLanguagePost') }}</span>-->
+            <span v-else>{{ $t('soonLanguagePost') }}</span>
             <h1 class="elevate-cover__title">
               {{ title }}
             </h1>
@@ -26,7 +23,7 @@
           </div>
         </div>
         <ImageResponsive
-          :imageURL="'https://cdn.vuetifyjs.com/images/cards/docks.jpg'"
+          :imageURL="'blog/' + id + '/_main.jpg'"
           width="100%"
           class="elevate-cover__img"
           :alt="'Blog picture'"
@@ -53,7 +50,6 @@
     async asyncData ({params, store}) {
       const fileContent = await import(`~/contents/${store.state.i18n.locale}/blog/${params.slug}.md`)
       const attr = fileContent.attributes
-      console.log(attr)
       return {
         name: params.slug,
         title: attr.title,
@@ -106,7 +102,7 @@
         return `${process.env.baseUrl}/images/blog/${this.id}/_thumbnail.jpg`;
       },
       pageTitle: function () {
-        return this.title + ' – Federico Mazzei';
+        return this.title + ' – Marina Aisa';
       },
       showLocales () {
         return this.$i18n.locales.filter(locale => locale.code !== this.$i18n.locale)

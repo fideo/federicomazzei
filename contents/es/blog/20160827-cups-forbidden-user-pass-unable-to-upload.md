@@ -2,12 +2,12 @@
 title: CUPS forbidden user pass unable to upload
 link: http://fideox.federicomazzei.com.ar/cups-forbidden-user-pass-unable-to-upload/
 author: Fideo
-description: 
+description:
 post_id: 1087
 created: 2016/08/27 17:29:11
 created_gmt: 2016/08/27 20:29:11
 comment_status: open
-post_name: cups-forbidden-user-pass-unable-to-upload
+name: cups-forbidden-user-pass-unable-to-upload
 status: publish
 post_type: post
 ---

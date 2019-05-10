@@ -27,15 +27,6 @@ import blogsEn from "~/contents/en/blogsEn.js";
 import blogsEs from "~/contents/es/blogsEs.js";
 
 export default {
-  /*async asyncData ({params, app}) {
-      const fileContent = await import(fm)
-      const attr = fileContent.attributes
-      return {
-        date: attr.date,
-        description: attr.description,
-        title: attr.title,
-      }
-    },*/
   async asyncData({ store }) {
     const blogs = store.state.i18n.locale === "en" ? blogsEn : blogsEs;
 
@@ -62,7 +53,7 @@ export default {
         lang: this.$i18n.locale
       },
       meta: [
-        { name: "author", content: "Marina Aisa" },
+        { name: "author", content: "Federico Mazzei" },
         {
           name: "description",
           property: "og:description",

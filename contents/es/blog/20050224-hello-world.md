@@ -2,12 +2,12 @@
 title: Hola Mundo weblog
 link: http://fideox.federicomazzei.com.ar/hello-world/
 author: admin
-description: 
+description:
 post_id: 1
 created: 2005/02/24 01:08:01
 created_gmt: 2005/02/24 04:08:01
 comment_status: open
-post_name: hello-world
+name: 20050224-hello-world
 status: publish
 post_type: post
 ---

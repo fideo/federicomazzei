@@ -5,14 +5,12 @@ import blogsEn from './contents/en/blogsEn.js'
 import blogsEs from './contents/es/blogsEs.js'
 
 const productionUrl = {
-  en: "/en",
-  es: "/es"
-};
-const baseUrl = 'https://federicomazzei.com.ar';
+  en: '/en',
+  es: '/es'
+}
+const baseUrl = 'https://federicomazzei.com.ar'
 
-const works = [
-  "vr-player"
-];
+const works = ['vr-player']
 
 module.exports = {
   env: {
@@ -24,9 +22,8 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    title: 'federicomazzeisitenuxt',
+    title: 'Federico Mazzei Desarrollador de sitios Web',
     meta: [
-      { charset: 'utf-8' },
       /*{ name: 'viewport', content: 'width=device-width, initial-scale=1' },*/
       { charset: 'utf-8' },
       {
@@ -104,15 +101,10 @@ module.exports = {
       { rel: 'manifest', href: '/manifest.json' }
     ]
   },
-  ssr: true,
   /*
    ** Customize the progress bar color
    */
-  loading: { color: '#3CB371' },
-  /*
-   ** Agrego Vuetify
-   */
-  plugins: ['~/plugins/vuetify.js'],
+  loading: { color: '#3CB371', height: '5px' },
   /*
    ** Agrego el CSS para Vuetify
    */
@@ -122,9 +114,6 @@ module.exports = {
       lang: 'styl'
     }
   ],
-  modules: ['nuxt-fontawesome', ['nuxt-i18n', I18N]],
-
-
   /*
    ** Build configuration
    */
@@ -138,41 +127,52 @@ module.exports = {
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
+          //loader: 'eslint-loader',
           exclude: /(node_modules)/
         })
       }
-      const rule = config.module.rules.find(r => r.test.toString() === '/\\.(png|jpe?g|gif|svg|webp)$/');
-      config.module.rules.splice(config.module.rules.indexOf(rule), 1);
+      const rule = config.module.rules.find(
+        r => r.test.toString() === '/\\.(png|jpe?g|gif|svg|webp)$/'
+      )
+      config.module.rules.splice(config.module.rules.indexOf(rule), 1)
 
-      config.module.rules.push({
-        test: /\.md$/,
-        loader: 'frontmatter-markdown-loader',
-        include: path.resolve(__dirname, 'contents'),
-        options: {
-          vue: {
-            root: "dynamicMarkdown"
+      config.module.rules.push(
+        {
+          test: /\.md$/,
+          loader: 'frontmatter-markdown-loader',
+          include: path.resolve(__dirname, 'contents'),
+          options: {
+            vue: {
+              root: 'dynamicMarkdown'
+            }
+          }
+        },
+        {
+          test: /\.(jpe?g|png)$/i,
+          loader: 'responsive-loader',
+          options: {
+            placeholder: true,
+            quality: 60,
+            size: 1400,
+            adapter: require('responsive-loader/sharp')
+          }
+        },
+        {
+          test: /\.(gif|svg)$/,
+          loader: 'url-loader',
+          query: {
+            limit: 1000,
+            name: 'img/[name].[hash:7].[ext]'
           }
         }
-      }, {
-        test: /\.(jpe?g|png)$/i,
-        loader: 'responsive-loader',
-        options: {
-          placeholder: true,
-          quality: 60,
-          size: 1400,
-          adapter: require('responsive-loader/sharp')
-        }
-      }, {
-        test: /\.(gif|svg)$/,
-        loader: 'url-loader',
-        query: {
-          limit: 1000,
-          name: 'img/[name].[hash:7].[ext]'
-        }
-      });
+      )
     }
   },
+  /*
+   ** Agrego Vuetify
+   */
+  plugins: ['~/plugins/vuetify.js', { src: '~plugins/ga.js', ssr: false }],
+  modules: ['nuxt-fontawesome', ['nuxt-i18n', I18N]],
   generate: {
     routes: ['/es', '404']
       .concat(blogsEn.map(w => `/blog/${w}`))

@@ -1,19 +1,26 @@
 <template>
-  <section>
-    <h2>{{ $t('posts') }}</h2>
-    <span class="emoji-title emoji--writing" />
-    <ul id="blogs">
-      <card
-        v-for="blog in blogs"
-        :key="blog.name"
-        :work="blog"
-        :isWork="false"
-      />
-    </ul>
-  </section>
+  <v-item-group>
+    <v-container grid-list-md>
+      <h2>{{ $t('posts') }}</h2>
+      <v-layout wrap>
+        <v-flex
+          v-for="blog in blogs"
+          :key="blog.name"
+          xs12
+          md4
+        >
+          <card
+            :work="blog"
+            :isWork="false"
+          />
+        </v-flex>
+      </v-layout>
+    </v-container>
+  </v-item-group>
+
 </template>
 <script>
-import Card from "~/components/Card.vue";
+import Card from "~/components/Card.1.vue";
 export default {
   components: { Card },
   props: {

@@ -2,12 +2,12 @@
 title: Adios a PAPPO
 link: http://fideox.federicomazzei.com.ar/adios-a-pappo/
 author: Fideo
-description: 
+description:
 post_id: 3
 created: 2005/02/25 10:50:32
 created_gmt: 2005/02/25 13:50:32
 comment_status: open
-post_name: adios-a-pappo
+name: 20050225-adios-a-pappo
 status: publish
 post_type: post
 ---

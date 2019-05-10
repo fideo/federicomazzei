@@ -2,12 +2,12 @@
 title: Key para Sublime text 3
 link: http://fideox.federicomazzei.com.ar/key-sublime-text-3/
 author: Fideo
-description: 
+description:
 post_id: 971
 created: 2015/11/18 10:07:16
 created_gmt: 2015/11/18 13:07:16
 comment_status: open
-post_name: key-sublime-text-3
+name: 20151118-key-sublime-text-3
 status: private
 post_type: post
 ---

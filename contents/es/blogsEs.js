@@ -1,4 +1,5 @@
 export default [
+  'blog-usando-vue-nuxt-markdown',
   '20050224-gracias-talo',
   '20050224-hello-world',
   '20050225-adios-a-pappo',
