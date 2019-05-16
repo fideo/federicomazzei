@@ -1,70 +1,56 @@
 <template>
-  <li class="portfolio__item">
-    <a
-      v-if="isWork"
-      :href="work.url"
-      class="portfolio__thumb-inner"
+  <v-layout>
+    <v-flex
+      xs12
+      sm12
+      offset-sm1
     >
-      <div
-        class="portfolio__thumb-hover"
-        :style="backgroundColor"
-      >
-        <div class="portfolio__thumb-text">
-          <h3 class="portfolio__thumb-description">
-            {{ work.title }}
-          </h3>
-          <h3 class="portfolio__thumb-client">
-            {{ work.description }}
-          </h3>
-        </div>
-      </div>
-      <ImageResponsive
-        :imageURL="cardImage"
-        :classes="'cardThumbnail'"
-        :width="'952'"
-        :height="'509'"
-        :alt="work.cardAlt"
-      />
-    </a>
-    <nuxt-link
-      v-else
-      :to="localePath({ name: nuxtLink, params: { slug: work.name }})"
-      class="portfolio__thumb-inner"
-    >
-      <div
-        class="portfolio__thumb-hover"
-        :style="backgroundColor"
-      >
-        <div class="portfolio__thumb-text">
-          <h3
-            class="portfolio__thumb-description"
-            :class="{ 'portfolio__thumb-description--dark' : work.isTextColorDark }"
+      <v-card nuxt:true>
+        <nuxt-link :to="localePath({ name: nuxtLink, params: { slug: work.name }})">
+          <ImageResponsive
+            :imageURL="cardImage"
+            :classes="'cardThumbnail'"
+            :width="'400'"
+            :height="'200'"
+            :alt="work.cardAlt"
+          />
+          <v-container
+            fill-height
+            fluid
           >
-            {{ work.title }}
-          </h3>
-          <h3
-            class="portfolio__thumb-client"
-            :class="{ 'portfolio__thumb-client--dark' : work.isTextColorDark }"
-          >
-            {{ work.description }}
-          </h3>
-        </div>
-      </div>
-      <ImageResponsive
-        :imageURL="cardImage"
-        :classes="'cardThumbnail'"
-        :width="'952'"
-        :height="'509'"
-        :alt="work.cardAlt"
-      />
-    </nuxt-link>
-    <div class="portfolio__description">
-      {{ work.title }}
-    </div>
-    <div class="portfolio__client">
-      {{ work.description }}
-    </div>
-  </li>
+
+            <v-layout fill-height>
+              <v-flex
+                xs12
+                align-end
+                flexbox
+              >
+                {{ work.title }}
+              </v-flex>
+            </v-layout>
+          </v-container>
+          <v-card-title>
+            <div>
+              <span class="grey--text">Number 10</span><br>
+              <span>{{ work.description }}</span><br>
+              <span>Whitsunday Island, Whitsunday Islands</span>
+            </div>
+          </v-card-title>
+          <v-card-actions>
+            <v-btn
+              flat
+              color="orange"
+            >Ver</v-btn>
+            <v-btn
+              flat
+              color="orange"
+            >Explore</v-btn>
+          </v-card-actions>
+        </nuxt-link>
+      </v-card>
+    </v-flex>
+  </v-layout>
+
 </template>
 
 <script lang="js">
@@ -81,8 +67,8 @@
       }
     },
 
-    computed: {
-      cardImage () {
+    computed: {      
+      cardImage() {
         return this.isWork ?
           `work/${this.work.name}/_thumbnail.jpg` :
           `blog/${this.work.id}/_thumbnail.jpg`;

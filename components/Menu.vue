@@ -48,27 +48,27 @@
           </v-btn>
           <v-btn
             flat
-            to="acercademi"
+            to="../acercademi"
           >
-            <v-list-tile to="acercademi">Este soy yo</v-list-tile>
+            <v-list-tile to="../acercademi">Este soy yo</v-list-tile>
           </v-btn>
           <v-btn
             flat
-            to="quehago"
+            to="../quehago"
           >
-            <v-list-tile to="quehago">¿Qué se hacer?</v-list-tile>
+            <v-list-tile to="../quehago">¿Qué se hacer?</v-list-tile>
           </v-btn>
           <v-btn
             flat
-            to="escribime"
+            to="../escribime"
           >
-            <v-list-tile to="escribime">Escribime</v-list-tile>
+            <v-list-tile to="../escribime">Escribime</v-list-tile>
           </v-btn>
           <v-btn
             flat
-            to="blog"
+            to="../blog"
           >
-            <v-list-tile to="blog">Blog</v-list-tile>
+            <v-list-tile to="../blog">Blog</v-list-tile>
           </v-btn>
         </v-toolbar-items>
         <v-spacer></v-spacer>

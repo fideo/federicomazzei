@@ -1,0 +1,44 @@
+@require '~vuetify/src/stylus/settings/_colors'
+
+$theme ?= {
+    primary: #9c27b0,
+    accent: #ce93d8,
+    secondary: #424242,
+    info: #0D47A1,
+    warning: #ffb300,
+    error: #B71C1C,
+    success: #2E7D32
+}
+
+body
+    font-family 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif
+
+.margenTop
+    margin-top 3em
+
+.primary--text
+    color #3CB371 !important
+    caret-color #3CB371 !important
+
+@require '~vuetify/src/stylus/main.styl'
+
+@font-face
+    font-family Aquatico
+    src url('/fonts/Aquatico-Regular.otf')
+
+@font-face
+    font-family Prosto
+    src url('/fonts/Prosto.ttf')
+
+@font-face
+    font-family Track
+    src url('/fonts/Track-Regular.otf')
+
+@font-face
+    font-family Akid
+    src url('/fonts/AKID.ttf')
+
+.miEmpresa
+    text-transform uppercase
+    letter-spacing 0.2em
+    text-shadow 1px 1px 2px #888

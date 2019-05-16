@@ -7,7 +7,7 @@ post_id: 1087
 created: 2016/08/27 17:29:11
 created_gmt: 2016/08/27 20:29:11
 comment_status: open
-name: cups-forbidden-user-pass-unable-to-upload
+name: 20160827-cups-forbidden-user-pass-unable-to-upload
 status: publish
 post_type: post
 ---

@@ -9,7 +9,7 @@
             <p>&nbsp;</p>
             <span class="blogSelected-year">{{ year }}</span>
             —
-            <!--<nuxt-link
+            <nuxt-link
               v-if="trans"
               v-for="(locale, i) in showLocales"
               :key="i"
@@ -18,7 +18,7 @@
 
               {{ $t('changeLanguagePost') }}
             </nuxt-link>
-            <span v-else>{{ $t('soonLanguagePost') }}</span>-->
+            <span v-else>{{ $t('soonLanguagePost') }}</span>
             <h1 class="elevate-cover__title">
               {{ title }}
             </h1>
@@ -26,7 +26,7 @@
           </div>
         </div>
         <ImageResponsive
-          :imageURL="'https://cdn.vuetifyjs.com/images/cards/docks.jpg'"
+          :imageURL="'blog/' + id + '/_main.jpg'"
           width="100%"
           class="elevate-cover__img"
           :alt="'Blog picture'"
@@ -53,12 +53,12 @@
     async asyncData ({params, store}) {
       const fileContent = await import(`~/contents/${store.state.i18n.locale}/blog/${params.slug}.md`)
       const attr = fileContent.attributes
-      console.log(attr)
+      //console.log(attr)
       return {
         name: params.slug,
         title: attr.title,
         trans: attr.trans,
-        year: attr.year,
+        year: attr.created,
         id: attr.id,
         owner: attr.owner,
         colors: attr.colors,

@@ -7,7 +7,7 @@ post_id: 1305
 created: 2018/02/12 09:17:12
 created_gmt: 2018/02/12 12:17:12
 comment_status: open
-name: minimizar-aplicaciones-al-click-ubuntu-17-10-gnome
+name: 20180212-minimizar-aplicaciones-al-click-ubuntu-17-10-gnome
 status: publish
 post_type: post
 ---

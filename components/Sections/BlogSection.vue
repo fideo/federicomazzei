@@ -20,7 +20,7 @@
 
 </template>
 <script>
-import Card from "~/components/Card.1.vue";
+import Card from "~/components/Card.vue";
 export default {
   components: { Card },
   props: {

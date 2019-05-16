@@ -21,7 +21,6 @@
 </template>
 
 <script>
-//import fm from "~/contents/es/blogsEs.js";
 import BlogSection from "~/components/Sections/BlogSection.vue";
 import blogsEn from "~/contents/en/blogsEn.js";
 import blogsEs from "~/contents/es/blogsEs.js";

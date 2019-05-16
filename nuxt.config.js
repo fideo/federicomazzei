@@ -13,6 +13,7 @@ const baseUrl = 'https://federicomazzei.com.ar'
 const works = ['vr-player']
 
 module.exports = {
+  mode: 'production',
   env: {
     baseUrl,
     productionUrl,
@@ -171,7 +172,12 @@ module.exports = {
   /*
    ** Agrego Vuetify
    */
-  plugins: ['~/plugins/vuetify.js', { src: '~plugins/ga.js', ssr: false }],
+  plugins: [
+    '~/plugins/lazyload',
+    '~/plugins/globalComponents',
+    '~/plugins/vuetify.js',
+    { src: '~plugins/ga.js', ssr: false }
+  ],
   modules: ['nuxt-fontawesome', ['nuxt-i18n', I18N]],
   generate: {
     routes: ['/es', '404']

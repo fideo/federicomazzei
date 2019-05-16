@@ -7,8 +7,9 @@ post_id: 2
 created: 2005/02/24 01:20:32
 created_gmt: 2005/02/24 04:20:32
 comment_status: open
-trans: 20050224-gracias-talo
+trans: 20050224-gracias-talo_en
 name: 20050224-gracias-talo
+id: 20050224-gracias-talo
 status: publish
 post_type: post
 ---

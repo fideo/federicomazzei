@@ -7,7 +7,7 @@ post_id: 1278
 created: 2017/09/25 19:49:48
 created_gmt: 2017/09/25 22:49:48
 comment_status: open
-name: reaction-commerce-usando-propio-servidor
+name: 20170925-reaction-commerce-usando-propio-servidor
 status: publish
 post_type: post
 ---

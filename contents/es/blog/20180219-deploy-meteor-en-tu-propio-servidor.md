@@ -7,7 +7,7 @@ post_id: 1284
 created: 2018/02/19 11:28:42
 created_gmt: 2018/02/19 14:28:42
 comment_status: open
-name: deploy-meteor-en-tu-propio-servidor
+name: 20180219-deploy-meteor-en-tu-propio-servidor
 status: publish
 post_type: post
 ---
