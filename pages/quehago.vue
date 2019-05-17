@@ -1,17 +1,16 @@
 <template>
   <v-app>
     <v-container
-      fluid
+      bg
+      fill-height
       grid-list-md
+      text-xs-center
     >
       <v-layout
         row
         wrap
       >
-        <v-flex
-          xs12
-          class="margenTop"
-        >
+        <v-flex xs12>
           <v-container text-xs-center>
             <p class="display-1 text-uppercase">¿Qué se hacer?</p>
             <p class="headline">De todo!!! soy completito... lavar, cocinar, planchar, etc, etc... </p>

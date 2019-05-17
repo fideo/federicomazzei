@@ -1,6 +1,7 @@
 <template>
   <v-app>
     <Menu />
+    <p class="mt-4">&nbsp;</p>
     <nuxt />
   </v-app>
 </template>

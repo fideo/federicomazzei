@@ -2,6 +2,7 @@
   <v-app>
     <v-container
       bg
+      fill-height
       grid-list-md
       text-xs-center
     >
@@ -10,27 +11,29 @@
         wrap
         align-center
       >
-        <v-flex class="margenTop">
-          <p class="display-1 text-uppercase">Este soy yo</p>
-          <p class="subheading">Te cuento un poco acerca de mi vida laboral. Ya que para mi vida personal existe <a href="https://www.instagram.com/fideox/">Instagram</a>, <a href="https://twitter.com/fideox/">Twitter</a> y <a href="https://www.facebook.com/mazzeifederico">Facebook</a> (ordenadas en forma descendentes en uso)</p>
-          <v-timeline>
-            <v-timeline-item
-              v-for="(historia, index) in historias"
-              :key="index"
-              color="yellow lighten-2"
-              large
-            >
-              <span slot="opposite">{{historia.referencia}}</span>
-              <v-card class="elevation-2">
-                <v-card-title>
-                  <div class="headline">{{historia.empresa}}</div>
-                </v-card-title>
-                <v-card-text>
-                  {{historia.descripcion}}
-                </v-card-text>
-              </v-card>
-            </v-timeline-item>
-          </v-timeline>
+        <v-flex xs12>
+          <v-container text-xs-center>
+            <p class="display-1 text-uppercase">Este soy yo</p>
+            <p class="subheading">Te cuento un poco acerca de mi vida laboral. Ya que para mi vida personal existe <a href="https://www.instagram.com/fideox/">Instagram</a>, <a href="https://twitter.com/fideox/">Twitter</a> y <a href="https://www.facebook.com/mazzeifederico">Facebook</a> (ordenadas en forma descendentes en uso)</p>
+            <v-timeline>
+              <v-timeline-item
+                v-for="(historia, index) in historias"
+                :key="index"
+                color="yellow lighten-2"
+                large
+              >
+                <span slot="opposite">{{historia.referencia}}</span>
+                <v-card class="elevation-2">
+                  <v-card-title>
+                    <div class="headline">{{historia.empresa}}</div>
+                  </v-card-title>
+                  <v-card-text>
+                    {{historia.descripcion}}
+                  </v-card-text>
+                </v-card>
+              </v-timeline-item>
+            </v-timeline>
+          </v-container>
         </v-flex>
       </v-layout>
     </v-container>

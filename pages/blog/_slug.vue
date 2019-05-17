@@ -1,14 +1,38 @@
 <template>
-  <div class="blogSelected">
-    <div class="intro">
-      <div class="elevate-cover">
-        <div class="elevate-cover__textOffset">
-          <div class="elevate-cover__text">
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
-            <span class="blogSelected-year">{{ year }}</span>
-            <!--
+  <v-container
+    grid-list-md
+    text-xs-center
+  >
+    <v-layout
+      row
+      wrap
+    >
+      <v-flex xs12>
+        <v-card>
+          <v-card-text class="px-0">
+            <ImageResponsive
+              :imageURL="'blog/' + id + '/_main.jpg'"
+              width="600"
+              class="elevate-cover__img"
+              :alt="name"
+            />
+          </v-card-text>
+          <v-card-text class="px-0">
+            <h1 class="display-2">{{ title }}</h1>
+          </v-card-text>
+        </v-card>
+      </v-flex>
+    </v-layout>
+  </v-container>
+
+  <!--
+<div class="blogSelected">
+      <div class="intro">
+        <div class="elevate-cover">
+          <div class="elevate-cover__textOffset">
+            <div class="elevate-cover__text">
+              <span class="blogSelected-year">{{ year }}</span>
+            // ocultar  
             —
             <nuxt-link
               v-if="trans"
@@ -19,28 +43,31 @@
 
             {{ $t('changeLanguagePost') }}
             </nuxt-link>
-            <span v-else>{{ $t('soonLanguagePost') }}</span>-->
-            <h1 class="elevate-cover__title">
-              {{ title }}
-            </h1>
-            <p class="elevate-cover__description">{{ description }}</p>
+            <span v-else>{{ $t('soonLanguagePost') }}</span>
+            // ocultar
+              <h1 class="elevate-cover__title">
+                {{ title }}
+              </h1>
+              <p class="elevate-cover__description">{{ description }}</p>
+            </div>
           </div>
+          <ImageResponsive
+            :imageURL="'blog/' + id + '/_main.jpg'"
+            width="100%"
+            class="elevate-cover__img"
+            :alt="'Blog picture'"
+          />
         </div>
-        <ImageResponsive
-          :imageURL="'blog/' + id + '/_main.jpg'"
-          width="100%"
-          class="elevate-cover__img"
-          :alt="'Blog picture'"
+      </div>
+      <div class="container small">
+        <DynamicMarkdown
+          :render-func="renderFunc"
+          :static-render-funcs="staticRenderFuncs"
         />
       </div>
     </div>
-    <div class="container small">
-      <DynamicMarkdown
-        :render-func="renderFunc"
-        :static-render-funcs="staticRenderFuncs"
-      />
-    </div>
-  </div>
+    -->
+
 </template>
 
 <script lang="js">
@@ -160,6 +187,7 @@
 
   &__img, &__textOffset
     width 100%
+    float left
 
   &__text
     max-width 700px

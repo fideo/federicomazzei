@@ -1,19 +1,26 @@
 <template>
   <v-app>
     <v-container
-      fluid
+      bg
+      fill-height
       grid-list-md
+      text-xs-center
     >
       <v-layout
         row
         wrap
       >
-        <v-flex
-          xs12
-          class="margenTop"
-        >
-          <h1>Este es el blog</h1>
-          <BlogSection :blogs="blogs" />
+        <v-flex x12>
+          <v-card>
+            <v-container
+              grid-list-sm
+              fluid
+              text-xs-center
+            >
+              <h1 class="display-1">Algunas notas interesantes - Mi blog</h1>
+              <BlogSection :blogs="blogs" />
+            </v-container>
+          </v-card>
         </v-flex>
       </v-layout>
     </v-container>

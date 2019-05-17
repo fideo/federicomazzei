@@ -9,13 +9,13 @@
       <v-layout
         row
         wrap
-        align-center
       >
-        <v-flex>
+        <v-flex x12>
           <v-card>
             <v-container
               grid-list-sm
               fluid
+              text-xs-center
             >
               <p class="display-1 text-uppercase">Escribime</p>
               <v-form
