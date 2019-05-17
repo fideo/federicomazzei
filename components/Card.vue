@@ -6,7 +6,10 @@
       offset-sm1
     >
       <v-card nuxt:true>
-        <nuxt-link :to="localePath({ name: nuxtLink, params: { slug: work.name }})">
+        <nuxt-link
+          :to="localePath({ name: nuxtLink, params: { slug: work.name }})"
+          class="linkSinSubrrayar"
+        >
           <ImageResponsive
             :imageURL="cardImage"
             :classes="'cardThumbnail'"
@@ -86,6 +89,10 @@
 </script>
 
 <style lang="stylus">
+.linkSinSubrrayar
+  text-decoration none
+  color black
+
 .cardThumbnail
   transition all ease 0.75s
   opacity 0.7

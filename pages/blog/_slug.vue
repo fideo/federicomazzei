@@ -8,6 +8,7 @@
             <p>&nbsp;</p>
             <p>&nbsp;</p>
             <span class="blogSelected-year">{{ year }}</span>
+            <!--
             —
             <nuxt-link
               v-if="trans"
@@ -16,9 +17,9 @@
               :to="(locale.code == 'en' ? '' : '/' + locale.code) + '/blog/' + trans"
             >
 
-              {{ $t('changeLanguagePost') }}
+            {{ $t('changeLanguagePost') }}
             </nuxt-link>
-            <span v-else>{{ $t('soonLanguagePost') }}</span>
+            <span v-else>{{ $t('soonLanguagePost') }}</span>-->
             <h1 class="elevate-cover__title">
               {{ title }}
             </h1>
@@ -161,7 +162,7 @@
     width 100%
 
   &__text
-    max-width 500px
+    max-width 700px
     width 100%
     padding 2.4rem
 

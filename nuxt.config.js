@@ -1,5 +1,6 @@
 const builtAt = new Date().toISOString()
 const path = require('path')
+console.log(path)
 const { I18N } = require('./locales/i18n-nuxt-config')
 import blogsEn from './contents/en/blogsEn.js'
 import blogsEs from './contents/es/blogsEs.js'

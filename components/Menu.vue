@@ -3,7 +3,7 @@
     <no-ssr>
       <v-navigation-drawer
         v-model="drawer"
-        absolute
+        fixed
         temporary
         class="lighten-2"
       >
@@ -86,17 +86,22 @@ export default {
       {
         title: "Este soy yo",
         icon: "account_circle",
-        link: "acercademi"
+        link: "../acercademi"
       },
       {
         title: "¿Qué se hacer?",
         icon: "build",
-        link: "quehago"
+        link: "../quehago"
       },
       {
         title: "Escribime",
         icon: "phone",
-        link: "escribime"
+        link: "../escribime"
+      },
+      {
+        title: "Blog",
+        icon: "note",
+        link: "../blog"
       }
     ]
   })
