@@ -4,7 +4,7 @@
       bg
       fill-height
       grid-list-md
-      text-xs-center
+      
     >
       <v-layout
         row
@@ -15,7 +15,7 @@
             <v-container
               grid-list-sm
               fluid
-              text-xs-center
+              
             >
               <h1 class="display-1">Algunas notas interesantes - Mi blog</h1>
               <BlogSection :blogs="blogs" />

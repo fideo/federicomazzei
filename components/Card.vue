@@ -5,11 +5,12 @@
       sm12
       offset-sm1
     >
-      <v-card nuxt:true>
-        <nuxt-link
+    <nuxt-link
           :to="localePath({ name: nuxtLink, params: { slug: work.name }})"
           class="linkSinSubrrayar"
         >
+      <v-card class="pa-3">
+        
           <ImageResponsive
             :imageURL="cardImage"
             :classes="'cardThumbnail'"
@@ -22,35 +23,19 @@
             fluid
           >
 
-            <v-layout fill-height>
-              <v-flex
-                xs12
-                align-end
-                flexbox
-              >
-                {{ work.title }}
-              </v-flex>
-            </v-layout>
-          </v-container>
-          <v-card-title>
+
             <div>
-              <span class="grey--text">Number 10</span><br>
-              <span>{{ work.description }}</span><br>
-              <span>Whitsunday Island, Whitsunday Islands</span>
+                <h3 class="headline mb-0">{{ work.title }}</h3>
+            </div>
+
+          </v-container>
+          <v-card-title primary-title>
+            <div>
+              <span>{{ work.description }}</span>
             </div>
           </v-card-title>
-          <v-card-actions>
-            <v-btn
-              flat
-              color="orange"
-            >Ver</v-btn>
-            <v-btn
-              flat
-              color="orange"
-            >Explore</v-btn>
-          </v-card-actions>
+        </v-card>
         </nuxt-link>
-      </v-card>
     </v-flex>
   </v-layout>
 

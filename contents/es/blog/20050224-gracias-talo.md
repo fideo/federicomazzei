@@ -2,7 +2,7 @@
 title: Gracias TALO
 link: http://fideox.federicomazzei.com.ar/gracias-talo/
 author: admin
-description: Agreadesco a Talo por presentarme Wordpress
+description: Agreadesco a Talo por presentarme Wordpress escribo un poco mas para ver como queda
 post_id: 2
 created: 2005/02/24 01:20:32
 created_gmt: 2005/02/24 04:20:32

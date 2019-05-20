@@ -1,7 +1,6 @@
 <template>
   <v-container
     grid-list-md
-    text-xs-center
   >
     <v-layout
       row
@@ -10,15 +9,21 @@
       <v-flex xs12>
         <v-card>
           <v-card-text class="px-0">
+            <div class="pa-3" style="float: left">
             <ImageResponsive
               :imageURL="'blog/' + id + '/_main.jpg'"
-              width="600"
+              width="100%"
               class="elevate-cover__img"
               :alt="name"
+              
             />
-          </v-card-text>
-          <v-card-text class="px-0">
-            <h1 class="display-2">{{ title }}</h1>
+            </div>
+            <h1 class="display-2 pt-5">{{ title }}</h1>
+            <p class="pa-3">{{description}}</p>
+            <DynamicMarkdown
+          :render-func="renderFunc"
+          :static-render-funcs="staticRenderFuncs"
+        />
           </v-card-text>
         </v-card>
       </v-flex>
@@ -187,7 +192,6 @@
 
   &__img, &__textOffset
     width 100%
-    float left
 
   &__text
     max-width 700px
@@ -216,14 +220,15 @@
     margin 0
 
 .dynamicMarkdown
-  padding 3.2rem 0
+  padding 3.2rem 3.2rem
   font-size 16px
   line-height 1.7
   display block
-  max-width 700px
+  max-width 98%
   margin-left auto
   margin-right auto
   color $secondary
+
 
   @media (min-width: $screen-sm)
     padding 7.2rem 0
