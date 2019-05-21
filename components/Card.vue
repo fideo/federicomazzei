@@ -3,14 +3,16 @@
     <v-flex
       xs12
       sm12
-      offset-sm1
     >
-    <nuxt-link
-          :to="localePath({ name: nuxtLink, params: { slug: work.name }})"
-          class="linkSinSubrrayar"
+      <nuxt-link
+        :to="localePath({ name: nuxtLink, params: { slug: work.name }})"
+        class="linkSinSubrrayar"
+      >
+        <v-card
+          class="pa-3"
+          dark
         >
-      <v-card class="pa-3">
-        
+
           <ImageResponsive
             :imageURL="cardImage"
             :classes="'cardThumbnail'"
@@ -23,9 +25,8 @@
             fluid
           >
 
-
             <div>
-                <h3 class="headline mb-0">{{ work.title }}</h3>
+              <h3 class="headline mb-0">{{ work.title }}</h3>
             </div>
 
           </v-container>
@@ -35,7 +36,7 @@
             </div>
           </v-card-title>
         </v-card>
-        </nuxt-link>
+      </nuxt-link>
     </v-flex>
   </v-layout>
 

@@ -1,6 +1,6 @@
 <template>
   <v-container grid-list-md>
-    <h2>{{ $t('posts') }}</h2>
+    <h2 class="pl-3 pb-2"><u>{{ $t('posts') }}</u></h2>
     <v-layout wrap>
       <v-flex
         v-for="blog in blogs"

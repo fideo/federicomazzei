@@ -2,9 +2,14 @@
 /* eslint-disable */
   import InlineCode from './InlineCode.vue'
   import hljs from 'highlight.js/lib/highlight'
+  
   import javascript from 'highlight.js/lib/languages/javascript'
   hljs.registerLanguage('javascript', javascript)
-  import 'highlight.js/styles/a11y-light.css'
+  
+  import bash from 'highlight.js/lib/languages/bash'
+  hljs.registerLanguage('bash', bash)
+  
+  import 'highlight.js/styles/hybrid.css'
 
   export default {
     props: ["renderFunc", "staticRenderFuncs"],

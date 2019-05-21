@@ -4,7 +4,6 @@
       bg
       fill-height
       grid-list-md
-      
     >
       <v-layout
         row
@@ -15,9 +14,8 @@
             <v-container
               grid-list-sm
               fluid
-              
             >
-              <h1 class="display-1">Algunas notas interesantes - Mi blog</h1>
+              <!--<h1 class="display-1">Algunas notas interesantes - Mi blog</h1>-->
               <BlogSection :blogs="blogs" />
             </v-container>
           </v-card>
