@@ -1,5 +1,5 @@
 export default ({ app }) => {
-  //if (process.env.NODE_ENV !== 'production') return;
+  if (process.env.NODE_ENV !== 'production') return
   ;(function(i, s, o, g, r, a, m) {
     i['GoogleAnalyticsObject'] = r
     ;(i[r] =
