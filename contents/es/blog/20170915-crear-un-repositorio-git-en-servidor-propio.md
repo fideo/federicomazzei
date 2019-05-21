@@ -2,12 +2,13 @@
 title: Crear un repositorio git en servidor propio
 link: http://fideox.federicomazzei.com.ar/crear-un-repositorio-git-en-servidor-propio/
 author: Fideo
-description:
+description: tus proyectos en casa pero con todo el potencial de git
 post_id: 1251
 created: 2017/09/15
 created_gmt: 2017/09/15 15:17:37
 comment_status: open
 name: 20170915-crear-un-repositorio-git-en-servidor-propio
+#id: 20170915-crear-un-repositorio-git-en-servidor-propio
 status: publish
 post_type: post
 ---
@@ -18,7 +19,7 @@ Para crear un repositorio git en servidor propio hay que seguir algunos pasos mu
 
 ## Servidor
 
-Primero entramos al _servidor_ una vez dentro ejecutamos lo siguiente:
+Primero entramos al _**servidor**_ de la forma que estés habituado, en mi caso uso <a href="https://www.putty.org/" target="_blank">putty</a> si es que estoy desde un escritorio remoto; una vez dentro ejecutamos lo siguiente:
 
 ```git
 cd ~
@@ -98,4 +99,10 @@ git branch origin/prod # en caso de no tenerla se crea la rama origin/prod
 
 ## Mas documentación sobre git
 
-[Documentación oficial](https://git-scm.com/documentation) [ GitHub](https://github.com/) [Mas información sobre git en este sitio](/category/git/) Copyright (C) 2017 Federico Mazzei Se permite copiar, distribuir y/o modificar este documento bajo los términos de la GNU Free Documentation License, Version 1.3 o cualquier versión publicada por la Free Software Foundation; sin Secciones Invariantes y sin Textos de Portada o Contraportada. Una copia de la licencia está incluida en [GNU Free Documentation License.](https://www.gnu.org/copyleft/fdl.html) ![Logo GFDL](http://fideox.federicomazzei.com.ar/wp-content/uploads/2017/09/GFDL_Logo.svg_.png) Crear un repositorio git en servidor propio
+[Documentación oficial](https://git-scm.com/documentation)
+
+[GitHub](https://github.com/) 
+
+[Mas información sobre git en este sitio](/category/git/) 
+
+Copyright (C) 2017 Federico Mazzei Se permite copiar, distribuir y/o modificar este documento bajo los términos de la GNU Free Documentation License, Version 1.3 o cualquier versión publicada por la Free Software Foundation; sin Secciones Invariantes y sin Textos de Portada o Contraportada. Una copia de la licencia está incluida en [GNU Free Documentation License.](https://www.gnu.org/copyleft/fdl.html) !

@@ -57,9 +57,14 @@
 
     computed: {      
       cardImage() {
-        return this.isWork ?
-          `work/${this.work.name}/_thumbnail.jpg` :
-          `blog/${this.work.id}/_thumbnail.jpg`;
+        if(this.work.id){
+          return this.isWork ?
+            `work/${this.work.name}/_thumbnail.jpg` :
+            `blog/${this.work.id}/_thumbnail.jpg`;
+        }else{
+          return `none.jpg`;
+        }
+        
       },
       nuxtLink () {
         return this.isWork ?

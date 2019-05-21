@@ -9,20 +9,25 @@
       <v-flex xs12>
         <v-card>
           <v-card-text class="px-0">
-            <div class="pa-3" style="float: left">
+            <div class="pt-1 pl-3 pr-3" style="float: left">
+              <!-- 
+                :imageURL="imageBig" 
+                :imageURL="'blog/' + id + '/_main.jpg'"
+              -->
             <ImageResponsive
-              :imageURL="'blog/' + id + '/_main.jpg'"
+              :imageURL="imageBig"
               width="100%"
               class="elevate-cover__img"
               :alt="name"
               
             />
             </div>
-            <h1 class="display-2 pt-5">{{ title }}</h1>
-            <p class="pa-3">{{description}}</p>
+            <h1 class="display-2 pb-2 pl-5">{{ title }}</h1>
+            <p class="pt-2 pb-0 pl-5">{{description}} - Creado por {{owner}} publicado el {{year}}</p>
             <DynamicMarkdown
           :render-func="renderFunc"
           :static-render-funcs="staticRenderFuncs"
+          class="pa-5"
         />
           </v-card-text>
         </v-card>
@@ -86,14 +91,14 @@
     async asyncData ({params, store}) {
       const fileContent = await import(`~/contents/${store.state.i18n.locale}/blog/${params.slug}.md`)
       const attr = fileContent.attributes
-      //console.log(attr)
+      //console.log(attr.id)
       return {
         name: params.slug,
         title: attr.title,
         trans: attr.trans,
         year: attr.created,
         id: attr.id,
-        owner: attr.owner,
+        owner: attr.author,
         colors: attr.colors,
         role: attr.role,
         cardAlt: attr.cardAlt,
@@ -104,10 +109,11 @@
         image: {
           main: attr.image && attr.image.main,
           og: attr.image && attr.image.og
-        }
+        },
+        
       }
     },
-
+    
     nuxtI18n: {
       seo: false
     },
@@ -153,6 +159,13 @@
           rel: 'alternate',
           href: (this.showLocales[0].code === 'en' ? '' : this.showLocales[0].code) + '/blog/' + this.trans,
           hreflang: this.showLocales[0].code
+        }
+      },
+      imageBig: function () {
+        if(this.id){
+          return 'blog/' + this.id + '/_main.jpg'
+        }else{
+          return ''
         }
       }
     },
@@ -225,8 +238,8 @@
   line-height 1.7
   display block
   max-width 98%
-  margin-left auto
-  margin-right auto
+  /*margin-left auto
+  margin-right auto*/
   color $secondary
 
 
