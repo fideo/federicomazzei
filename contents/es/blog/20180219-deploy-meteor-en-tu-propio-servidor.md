@@ -96,10 +96,12 @@ Esto nos permitirá hacer un **deploy meteor en tu propio servidor**.
 #passenger_instance_registry_dir /var/run/passenger-instreg;
 ``` 
 
-Hay que sacarle el comentario ( # ) y grabarlo 
+Hay que sacarle el comentario ( # ) y grabarlo el archivo debería quedar así -->
 
 ```bash
-passenger_root /some-filename/locations.ini; passenger_ruby /usr/bin/ruby; passenger_instance_registry_dir /var/run/passenger-instreg;
+passenger_root /some-filename/locations.ini; 
+passenger_ruby /usr/bin/ruby; 
+passenger_instance_registry_dir /var/run/passenger-instreg;
 ```
 
 Luego se reinicia el servidor nginx 
