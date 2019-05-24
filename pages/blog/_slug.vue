@@ -1,4 +1,5 @@
 <template>
+<v-app>
   <v-container
     grid-list-md
     align-center
@@ -79,7 +80,7 @@
       </div>
     </div>
     -->
-
+</v-app>
 </template>
 
 <script lang="js">
