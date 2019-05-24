@@ -4,6 +4,7 @@
       bg
       fill-height
       grid-list-md
+      align-center
     >
       <v-layout
         row
