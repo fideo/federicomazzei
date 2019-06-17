@@ -19,14 +19,13 @@
               -->
             <ImageResponsive
               :imageURL="imageBig"
-              width="100%"
-              class="elevate-cover__img"
+              class="elevate-cover__img dynamicMarkdown"
+              :width="400"
               :alt="name"
-              
             />
             </div>
             <h1 class="display-2 pb-2 pl-5">{{ title }}</h1>
-            <p class="pt-2 pb-0 pl-5">{{description}} - Creado por {{owner}} publicado el {{year}}</p>
+            <p class="pt-2 pb-0 pl-5 pr-5">{{description}} - Creado por {{owner}} publicado el {{year}}</p>
             <DynamicMarkdown
           :render-func="renderFunc"
           :static-render-funcs="staticRenderFuncs"
@@ -37,49 +36,6 @@
       </v-flex>
     </v-layout>
   </v-container>
-
-  <!--
-<div class="blogSelected">
-      <div class="intro">
-        <div class="elevate-cover">
-          <div class="elevate-cover__textOffset">
-            <div class="elevate-cover__text">
-              <span class="blogSelected-year">{{ year }}</span>
-            // ocultar  
-            —
-            <nuxt-link
-              v-if="trans"
-              v-for="(locale, i) in showLocales"
-              :key="i"
-              :to="(locale.code == 'en' ? '' : '/' + locale.code) + '/blog/' + trans"
-            >
-
-            {{ $t('changeLanguagePost') }}
-            </nuxt-link>
-            <span v-else>{{ $t('soonLanguagePost') }}</span>
-            // ocultar
-              <h1 class="elevate-cover__title">
-                {{ title }}
-              </h1>
-              <p class="elevate-cover__description">{{ description }}</p>
-            </div>
-          </div>
-          <ImageResponsive
-            :imageURL="'blog/' + id + '/_main.jpg'"
-            width="100%"
-            class="elevate-cover__img"
-            :alt="'Blog picture'"
-          />
-        </div>
-      </div>
-      <div class="container small">
-        <DynamicMarkdown
-          :render-func="renderFunc"
-          :static-render-funcs="staticRenderFuncs"
-        />
-      </div>
-    </div>
-    -->
 </v-app>
 </template>
 
