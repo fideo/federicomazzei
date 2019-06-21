@@ -2,15 +2,18 @@
   <v-app>
     <Menu />
     <p class="mt-4">&nbsp;</p>
+    <Whatsapp />
     <nuxt />
   </v-app>
 </template>
 
 <script>
 import Menu from "../components/Menu.vue";
+import Whatsapp from "../components/Whatsapp";
 export default {
   components: {
-    Menu
+    Menu,
+    Whatsapp
   }
 };
 </script>
