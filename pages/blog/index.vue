@@ -32,6 +32,7 @@ import blogsEn from "~/contents/en/blogsEn.js";
 import blogsEs from "~/contents/es/blogsEs.js";
 
 export default {
+  layout: 'personalizado',
   async asyncData({ store }) {
     const blogs = store.state.i18n.locale === "en" ? blogsEn : blogsEs;
 
