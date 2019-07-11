@@ -1,5 +1,5 @@
 ---
-title: Git en tu servidor
+title: Utilizar git para tus proyectos en tu servidor
 link: http://fideox.federicomazzei.com.ar/crear-un-repositorio-git-en-servidor-propio/
 author: Fideo
 description: Tus proyectos en casa pero con todo el potencial de git

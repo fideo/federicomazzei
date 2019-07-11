@@ -1,8 +1,7 @@
 <template>
-  <v-app>
+  <v-app light>
     <Menu />
     <p class="mt-4">&nbsp;</p>
-    <Whatsapp />
     <nuxt />
   </v-app>
 </template>

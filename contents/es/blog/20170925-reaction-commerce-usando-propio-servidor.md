@@ -1,5 +1,5 @@
 ---
-title: Reaction Commerce
+title: Reaction Commerce en tu servidor
 link: http://fideox.federicomazzei.com.ar/reaction-commerce-usando-propio-servidor/
 author: Fideo
 description: Utilizar el e-Commerce de ReactionCommerce en tu propio servidor
