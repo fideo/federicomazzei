@@ -174,6 +174,7 @@ module.exports = {
    ** Agrego Vuetify
    */
   plugins: [
+    '~/plugins/flamelink',
     '~/plugins/lazyload',
     '~/plugins/globalComponents',
     '~/plugins/vuetify.js',
