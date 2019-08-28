@@ -4,8 +4,10 @@
 	"description": "Sitio Web de Federico Mazzei",
 	"author": "Federico Mazzei <federicomazzei@gmail.com>",
 	"private": true,
+	"engines": {
+		"node": ">=8"
+	},
 	"scripts": {
-		"mode": "spa",
 		"dev": "nuxt",
 		"build": "nuxt build",
 		"start": "nuxt start",
@@ -16,11 +18,14 @@
 		"deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
 	},
 	"dependencies": {
+		"@nuxtjs/dotenv": "^1.4.0",
 		"@nuxtjs/markdownit": "^1.2.4",
+		"core-js": "^2.6.5",
 		"emailjs-com": "^2.3.2",
 		"firebase": "^6.4.2",
 		"firebase-admin": "^8.3.0",
 		"flamelink": "^1.0.0-alpha.24",
+		"lodash.get": "^4.4.2",
 		"material-design-icons-iconfont": "^4.0.4",
 		"nuxt": "^2.8.1",
 		"nuxt-fontawesome": "^0.4.0",
@@ -39,9 +44,10 @@
 		"eslint-plugin-vue": "^4.0.0",
 		"frontmatter-markdown-loader": "^1.6.0",
 		"highlight.js": "^9.13.1",
+		"lodash": ">=4.17.13",
 		"responsive-loader": "^1.2.0",
 		"sharp": "^0.22.1",
 		"vue-lazyload": "^1.2.6",
-		"lodash": ">=4.17.13"
+		"vue-template-compiler": "^2.6.10"
 	}
 }

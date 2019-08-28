@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+     <v-app>
     <v-container
       bg
       fill-height
@@ -16,8 +16,9 @@
               grid-list-sm
               fluid
             >
-              <!--<h1 class="display-1">Algunas notas interesantes - Mi blog</h1>-->
-              <BlogSection :blogs="blogs" />
+            <div v-for="post in posts" :key="post.id">
+                <post :post="post" />
+            </div>
             </v-container>
           </v-card>
         </v-flex>
@@ -27,82 +28,27 @@
 </template>
 
 <script>
-import BlogSection from "~/components/Sections/BlogSection.vue";
-import blogsEn from "~/contents/en/blogsEn.js";
-import blogsEs from "~/contents/es/blogsEs.js";
+import Post from '~/components/Post'
 
 export default {
-  layout: 'personalizado',
-  async asyncData({ store }) {
-    const blogs = store.state.i18n.locale === "en" ? blogsEn : blogsEs;
-
-    async function asyncImport(blogName) {
-      const wholeMD = await import(`~/contents/${
-        store.state.i18n.locale
-      }/blog/${blogName}.md`);
-      return wholeMD.attributes;
-    }
-
-    return Promise.all(blogs.map(blog => asyncImport(blog))).then(res => {
-      return {
-        blogs: res
-      };
-    });
+  
+  components: {
+      Post
   },
 
-  components: { BlogSection },
-
-  head() {
-    return {
-      title: this.$t("indexPageHead.title"),
-      htmlAttrs: {
-        lang: this.$i18n.locale
-      },
-      meta: [
-        { name: "author", content: "Federico Mazzei" },
-        {
-          name: "description",
-          property: "og:description",
-          content: this.$t("indexPageHead.description"),
-          hid: "description"
-        },
-        { property: "og:title", content: this.$t("indexPageHead.title") },
-        { property: "og:image", content: this.ogImage },
-        {
-          name: "twitter:description",
-          content: this.$t("indexPageHead.description")
-        },
-        { name: "twitter:image", content: this.ogImage }
-      ]
-    };
-  },
-  computed: {
-    ogUrl: function() {
-      return process.env.baseUrl;
-    },
-    ogImage: function() {
-      return `${process.env.baseUrl}/images/fb-banner.jpg`;
-    },
-    pageTitle: function() {
-      return "title";
-    },
-    pageDescription: function() {
-      return "description";
+  async asyncData({ app }) {
+    try {
+      const posts = await app.flamelink.content.get({
+        schemaKey: 'post',
+        populate: true
+      })
+      //console.log({ posts })
+      return { posts }
+    } catch (err) {
+      console.log(err)
+      return { posts: [] }
     }
   }
-};
-/*import fm from "~/content/es/blog/primer-post.md";
+}
 
-export default {
-  test: /\.md$/,
-  loader: 'frontmatter-markdown-loader',
-  options: {
-    vue: {
-      root: 'dynamicContent'
-    }
-  }
-};*/
 </script>
-
-<style>
-</style>

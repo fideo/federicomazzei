@@ -66,9 +66,9 @@
           </v-btn>
           <v-btn
             flat
-            to="../blog"
+            to="../blog/"
           >
-            <v-list-tile to="../blog">Blog</v-list-tile>
+            <v-list-tile to="../blog/">Blog</v-list-tile>
           </v-btn>
         </v-toolbar-items>
         <v-spacer></v-spacer>
