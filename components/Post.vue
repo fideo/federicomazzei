@@ -1,12 +1,20 @@
 <template>
-  <div>
-    <h1>{{ post.title }}</h1>
-    <h3>{{ post.subtitle }}</h3>
-    <h3>{{ post.datePublish }}</h3>
-    <img v-if="url" :src="url" :alt="post.name">
-    <div v-html="post.body"></div>
-    <div v-html="post.cuerpo"></div>
-  </div>
+  <v-app>
+    <v-layout>
+    <v-flex md4>
+      <v-card>
+        <img v-if="url" :src="url" :alt="post.name" aspect-ratio="1" width="100%">
+          <v-card-title>
+            <h2><strong>{{ post.title }}</strong></h2>
+            <h6 class="text-right">{{ post.datePublish }}</h6>
+          </v-card-title>
+          <v-card-text>
+            <h4>{{ post.subtitle }}</h4>
+          </v-card-text>
+      </v-card>
+    </v-flex>
+    </v-layout>
+  </v-app>
 </template>
 
 <script>

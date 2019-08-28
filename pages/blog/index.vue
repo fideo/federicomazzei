@@ -1,28 +1,14 @@
 <template>
-     <v-app>
+  <v-app>
     <v-container
       bg
       fill-height
       grid-list-md
       align-center
     >
-      <v-layout
-        row
-        wrap
-      >
-        <v-flex x12>
-          <v-card>
-            <v-container
-              grid-list-sm
-              fluid
-            >
-            <div v-for="post in posts" :key="post.id">
-                <post :post="post" />
-            </div>
-            </v-container>
-          </v-card>
-        </v-flex>
-      </v-layout>
+      <div v-for="post in posts" :key="post.id">
+        <post :post="post" />
+      </div>
     </v-container>
   </v-app>
 </template>
@@ -31,7 +17,7 @@
 import Post from '~/components/Post'
 
 export default {
-  
+  layout: 'blank',
   components: {
       Post
   },
