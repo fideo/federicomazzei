@@ -1,6 +1,6 @@
 <template>
   <div>
-    <no-ssr>
+    <client-only>
       <v-navigation-drawer
         v-model="drawer"
         fixed
@@ -73,7 +73,7 @@
         </v-toolbar-items>
         <v-spacer></v-spacer>
       </v-toolbar>
-    </no-ssr>
+    </client-only>
   </div>
 </template>
 

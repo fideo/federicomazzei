@@ -1,20 +1,19 @@
 <template>
-  <v-app>
-    <v-layout>
-    <v-flex md4>
-      <v-card>
-        <img v-if="url" :src="url" :alt="post.name" aspect-ratio="1" width="100%">
-          <v-card-title>
-            <h2><strong>{{ post.title }}</strong></h2>
-            <h6 class="text-right">{{ post.datePublish }}</h6>
-          </v-card-title>
-          <v-card-text>
-            <h4>{{ post.subtitle }}</h4>
-          </v-card-text>
-      </v-card>
-    </v-flex>
-    </v-layout>
-  </v-app>
+  <v-card>
+    <v-img 
+      v-if="url" :src="url" :alt="post.name" 
+      aspect-ratio="1" 
+      width="100%" 
+      height="210"
+      contain
+      max-width="500"
+      max-height="300" />
+    <v-card-title>
+      <h2><strong>{{ post.title }}</strong></h2>    
+    </v-card-title>
+    <v-card-text><h4 class="text-truncate">{{ post.subtitle }}</h4></v-card-text>
+    <v-card-actions><v-btn color="info" flat>Ir a nota</v-btn></v-card-actions>
+  </v-card>
 </template>
 
 <script>

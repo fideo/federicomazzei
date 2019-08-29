@@ -1,14 +1,11 @@
 <template>
   <v-app>
-    <v-container
-      bg
-      fill-height
-      grid-list-md
-      align-center
-    >
-      <div v-for="post in posts" :key="post.id">
-        <post :post="post" />
-      </div>
+    <v-container grid-list-md>
+      <v-layout row wrap>
+        <v-flex xs12 sm4  v-for="post in posts" :key="post.id">
+          <post :post="post" />
+        </v-flex>
+      </v-layout>
     </v-container>
   </v-app>
 </template>
@@ -17,7 +14,6 @@
 import Post from '~/components/Post'
 
 export default {
-  layout: 'blank',
   components: {
       Post
   },
@@ -26,9 +22,12 @@ export default {
     try {
       const posts = await app.flamelink.content.get({
         schemaKey: 'post',
+        limitToFirst: 6, //limito la cantidad de registros a mostrar
+        orderByChild: 'publicado',
+        equalTo: true,
         populate: true
       })
-      //console.log({ posts })
+      //console.log({ posts  })
       return { posts }
     } catch (err) {
       console.log(err)
