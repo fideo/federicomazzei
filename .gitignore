@@ -9,3 +9,7 @@ npm-debug.log
 
 # Nuxt generate
 dist
+
+# .env y json firebase
+.env
+federicomazzei-6759a-firebase-adminsdk-p1rmr-12379c27ef.json
