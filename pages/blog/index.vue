@@ -23,8 +23,9 @@ export default {
       const posts = await app.flamelink.content.get({
         schemaKey: 'post',
         limitToFirst: 6, //limito la cantidad de registros a mostrar
-        orderByChild: 'publicado',
-        equalTo: true,
+        //orderByChild: 'datePublish',
+        //orderByChild: 'publicado',
+        //equalTo: true,
         populate: true
       })
       //console.log({ posts  })
