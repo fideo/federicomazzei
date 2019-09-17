@@ -18,14 +18,16 @@ export default {
       Post
   },
 
+  //TODO agregar el paginado
+
   async asyncData({ app }) {
     try {
       const posts = await app.flamelink.content.get({
         schemaKey: 'post',
-        limitToFirst: 6, //limito la cantidad de registros a mostrar
+        //limitToFirst: 6, //limito la cantidad de registros a mostrar
         //orderByChild: 'datePublish',
-        //orderByChild: 'publicado',
-        //equalTo: true,
+        orderByChild: 'publicado',
+        equalTo: true,
         populate: true
       })
       //console.log({ posts  })

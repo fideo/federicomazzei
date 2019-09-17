@@ -33,6 +33,7 @@
 		"push-dir": "^0.4.1",
 		"stylus": "^0.54.5",
 		"stylus-loader": "^3.0.2",
+		"vue-paginate": "^3.6.0",
 		"vuetify": "^1.4.3"
 	},
 	"devDependencies": {
