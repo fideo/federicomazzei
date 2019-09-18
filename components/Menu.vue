@@ -1,6 +1,6 @@
 <template>
   <div>
-    <no-ssr>
+    <client-only>
       <v-navigation-drawer
         v-model="drawer"
         fixed
@@ -66,14 +66,14 @@
           </v-btn>
           <v-btn
             flat
-            to="../blog"
+            to="../blog/"
           >
-            <v-list-tile to="../blog">Blog</v-list-tile>
+            <v-list-tile to="../blog/">Blog</v-list-tile>
           </v-btn>
         </v-toolbar-items>
         <v-spacer></v-spacer>
       </v-toolbar>
-    </no-ssr>
+    </client-only>
   </div>
 </template>
 

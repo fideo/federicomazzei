@@ -10,6 +10,6 @@ npm-debug.log
 # Nuxt generate
 dist
 
-# .env y json firebase
+# Variables de conexion a Firebase
 .env
 federicomazzei-6759a-firebase-adminsdk-p1rmr-12379c27ef.json
