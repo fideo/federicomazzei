@@ -2,9 +2,11 @@
   <v-app>
     <v-container grid-list-md>
       <v-layout row wrap>
-        <v-flex xs12 sm4  v-for="post in posts" :key="post.id">
-          <post :post="post" />
-        </v-flex>
+        <post 
+          v-for="post in posts" 
+          :key="post.id"
+          :post="post" />
+        <v-pagination v-model="page" :length="totalPages" @input="next"></v-pagination>
       </v-layout>
     </v-container>
   </v-app>
@@ -18,6 +20,14 @@ export default {
       Post
   },
 
+  data () {
+      return {
+        page: 1,
+        totalPages: 5,
+        next: +1,
+      }
+    },
+
   //TODO agregar el paginado
 
   async asyncData({ app }) {
@@ -30,7 +40,8 @@ export default {
         equalTo: true,
         populate: true
       })
-      //console.log({ posts  })
+      
+      //console.log(posts)
       return { posts }
     } catch (err) {
       console.log(err)
@@ -41,7 +52,5 @@ export default {
 </script>
 
 <style scoped>
-a {
-  text-decoration: none;
-}
+
 </style>

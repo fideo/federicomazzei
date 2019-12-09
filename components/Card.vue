@@ -6,6 +6,7 @@
     >
       <nuxt-link
         :to="localePath({ name: nuxtLink, params: { slug: work.name }})"
+        :title="`${work.title}`"
         class="linkSinSubrrayar"
       >
         <v-card
@@ -24,14 +25,13 @@
             fill-height
             fluid
           >
-
             <div>
-              <h3 class="headline mb-0">{{ work.title }}</h3>
+              <h3 class="headline mb-0 text-truncate" style="max-width: 280px;">{{ work.title }}</h3>
             </div>
 
           </v-container>
           <v-card-title primary-title>
-            <div>
+            <div class="text-truncate" style="max-width: 300px;">
               <span>{{ work.description }}</span>
             </div>
           </v-card-title>
