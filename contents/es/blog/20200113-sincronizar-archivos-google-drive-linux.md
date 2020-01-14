@@ -15,7 +15,9 @@ post_type: post
 
 ## Sincronización con Google Drive en Linux
 
-Lo saqué de [el baul del programador](https://elbauldelprogramador.com/sincronizar-google-drive-en-linux-en-4-pasos/){:target="_blank"} que el autor de esa nota a su vez lo sacó de una página que al momento de escribir esta nota da error 404, es decir no existe. [Howto: Auto-sync Google Drive to a local folder with Grive. Ubuntu & Debian >> http://openlinuxforums.org](https://openlinuxforums.org/index.php?topic=3144.0){:target="_blank"}
+Lo saqué de [el baul del programador](https://elbauldelprogramador.com/sincronizar-google-drive-en-linux-en-4-pasos/){:target="_blank"} que el autor de esa nota a su vez lo sacó de una página que al momento de escribir esta nota da error 404, es decir no existe.
+
+[google]: www.google.com
 
 ### Lo primero que necesitamos es instalar grive
 
