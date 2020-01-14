@@ -15,9 +15,7 @@ post_type: post
 
 ## Sincronización con Google Drive en Linux
 
-Lo saqué de [el baul del programador](https://elbauldelprogramador.com/sincronizar-google-drive-en-linux-en-4-pasos/){:target="_blank"} que el autor de esa nota a su vez lo sacó de una página que al momento de escribir esta nota da error 404, es decir no existe.
-
-[google]: www.google.com
+Lo saqué de [el baul del programador](https://elbauldelprogramador.com/sincronizar-google-drive-en-linux-en-4-pasos/) que el autor de esa nota a su vez lo sacó de una página que al momento de escribir esta nota da error 404, es decir no existe.
 
 ### Lo primero que necesitamos es instalar grive
 
@@ -38,7 +36,7 @@ $ grive -a
 con mkdir ~/Drive creo un directorio dentro de mi home "user" que se llame Drive, luego entro a ese directorio con cd ~/Drive y por último ejecuto el comando grive -a que este comando sirve para generar los permisos necesarios para poder utilizar la cuenta de google drive con grive.
 
 Acá es donde a veces nos encontramos con un problema que no podemos autentificar contra google drive ya que nos dá un error el cual nos informa que tiene permisos o no se encuentra diponible.
-Para solucionar esto lo que hice fue lo siguiente, entré al repositorio oficial de grive [https://github.com/vitalif/grive2](https://github.com/vitalif/grive2){:target="_blank"} en la sección que se llama **_Different OAuth2 client to workaround over quota and google approval issues_** y realicé los pasos del 1 al 9 tal cual los mensiona ahí.
+Para solucionar esto lo que hice fue lo siguiente, entré al repositorio oficial de grive [https://github.com/vitalif/grive2](https://github.com/vitalif/grive2) en la sección que se llama **_Different OAuth2 client to workaround over quota and google approval issues_** y realicé los pasos del 1 al 9 tal cual los mensiona ahí.
 
 Una vez realizado esos pasos cree un cron que llamara directamente a grive con el <client_id> y <client_secret> quedaría algo así:
 
