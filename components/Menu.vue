@@ -66,9 +66,9 @@
           </v-btn>
           <v-btn
             flat
-            to="../blog"
+            href="http://fideox.federicomazzei.com.ar/"
           >
-            <v-list-tile to="../blog">Blog</v-list-tile>
+            <v-list-tile href="http://fideox.federicomazzei.com.ar/">Blog</v-list-tile>
           </v-btn>
         </v-toolbar-items>
         <v-spacer></v-spacer>
@@ -101,7 +101,7 @@ export default {
       {
         title: "Blog",
         icon: "note",
-        link: "../blog"
+        link: "http://www.federicomazzei.com.ar"
       }
     ]
   })
